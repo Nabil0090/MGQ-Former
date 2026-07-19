@@ -1,0 +1,37 @@
+# Virtual environment
+.venv/
+venv/
+env/
+__pycache__/
+
+# Model checkpoints and embeddings
+checkpoints/
+embeddings/
+outputs/
+image_extract/outputs/
+image_extract/output/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Python
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# OS
+.DS_Store
+.vscode/
+.idea/
+
+# Data (optional - uncomment if needed)
+# data/
+
+# Cache
+.cache/
+__pycache__/
+seg_model.pt
+test_pseudo_masks.pt
