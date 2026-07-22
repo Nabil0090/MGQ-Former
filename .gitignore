@@ -18,6 +18,7 @@ image_extract/output/
 # Python
 *.pyc
 *.pyo
+*.json
 *.egg-info/
 dist/
 build/
@@ -35,3 +36,6 @@ build/
 __pycache__/
 seg_model.pt
 test_pseudo_masks.pt
+
+fusion/gate.ipynb
+fusion/*.png
