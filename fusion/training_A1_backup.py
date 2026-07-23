@@ -41,6 +41,8 @@ class TrainConfig:
     lambda_type     : float = 0.3
     max_grad_norm   : float = 1.0
     label_smoothing : float = 0.1
+    use_mask        : bool = True
+    pooling         : str = "dual"
 
 
 TYPE2IDX = {
@@ -119,6 +121,8 @@ def build_model_and_optimizer(cfg: TrainConfig, device: torch.device):
         num_heads   = cfg.num_heads,
         ffn_dim     = cfg.ffn_dim,
         dropout     = cfg.dropout,
+        use_mask    = cfg.use_mask,
+        pooling     = cfg.pooling,
     ).to(device)
 
     optimizer = optim.AdamW([

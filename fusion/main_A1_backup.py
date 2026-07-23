@@ -1,6 +1,7 @@
 import argparse
 import sys
 import os
+
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from dataclasses import asdict
@@ -56,6 +57,8 @@ def parse_args():
         help="Weight for question-type auxiliary loss")
     parser.add_argument("--max_grad_norm", type=float, default=1.0)
     parser.add_argument("--label_smoothing", type=float, default=0.1)
+    parser.add_argument("--use_mask", type=lambda x: x.lower() == "true", default=True)
+    parser.add_argument("--pooling", type=str, default="dual", choices=["dual", "mean"])
 
     return parser.parse_args()
 
@@ -90,6 +93,8 @@ def main():
         lambda_type     = args.lambda_type,
         max_grad_norm   = args.max_grad_norm,
         label_smoothing = args.label_smoothing,
+        use_mask       = args.use_mask,
+        pooling        = args.pooling,
     )
 
     print("=" * 70)
