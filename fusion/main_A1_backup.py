@@ -67,7 +67,7 @@ def main():
     args = parse_args()
 
     # import here so path is resolved after sys.path append
-    from training import TrainConfig, run_training
+    from training_A1_backup import TrainConfig, run_training
 
     cfg = TrainConfig(
         vit_emb_dir     = args.vit_emb_dir,

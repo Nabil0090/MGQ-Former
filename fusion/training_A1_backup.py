@@ -111,7 +111,7 @@ def build_dataloaders(cfg: TrainConfig):
 
 
 def build_model_and_optimizer(cfg: TrainConfig, device: torch.device):
-    from fusion_model import MaskedClassifier
+    from fusion_model_A1_backup import MaskedClassifier
 
     model = MaskedClassifier(
         num_classes = cfg.num_classes,

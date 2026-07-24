@@ -41,5 +41,6 @@ test_pseudo_masks.pt
 fusion/gate.ipynb
 fusion/*.png
 fusion/ablation_logs/A1_no_mask_mean_pool/figures
+fusion/ablation_logs/A2_mask_mean_pool/figures
 
 
